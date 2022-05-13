@@ -14,11 +14,11 @@ type SecuritySystem struct {
 func NewSecuritySystem(info Info) *SecuritySystem {
 	a := New(info, TypeSecuritySystem)
 
-	garage := service.NewSecuritySystem()
-	a.Ss = append(a.Ss, garage.S)
+	security := service.NewSecuritySystem()
+	a.Ss = append(a.Ss, security.S)
 
 	return &SecuritySystem{
 		A:              a,
-		SecuritySystem: garage,
+		SecuritySystem: security,
 	}
 }
